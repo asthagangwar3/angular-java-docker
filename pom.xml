@@ -141,7 +141,7 @@
 			          <goals>
 			              <goal>npm</goal>
 			          </goals>
-			          <phase>generate-resources</phase>
+			          <phase>initialize</phase>
 			          <configuration>
 			              <arguments>run build-prod</arguments>
 			              <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
