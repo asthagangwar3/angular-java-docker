@@ -157,7 +157,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.6.0</version>
 				<configuration>
-        		           <installDirectory>project</installDirectory>
+        		           <installDirectory>root</installDirectory>
         		           <workingDirectory>src/main/ui</workingDirectory>
     		              </configuration>
 				<executions>
