@@ -151,6 +151,70 @@
 			</plugin>
 			
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+        		           <installDirectory>project</installDirectory>
+        		           <workingDirectory>src/main/ui</workingDirectory>
+    		              </configuration>
+				<executions>
+					<execution>
+						<id>gulp install</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+								<argument>gulp</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>del install</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+								<argument>del</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>log install</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+								<argument>fancy-log</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>gulp build</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>gulp</executable>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
 		      <groupId>org.springframework.boot</groupId>
 		      <artifactId>spring-boot-maven-plugin</artifactId>
 		      <executions>
